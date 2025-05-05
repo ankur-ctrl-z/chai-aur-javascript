@@ -14,8 +14,8 @@ const gameName1 = new String("hitesh")
 console.log(name1 == gameName1);  // ✅ true (value matches)
 console.log(name1 === gameName1); // ❌ false (type mismatch)
 
-// console.log(gameName[0]);
-// console.log(gameName.__proto__);
+console.log(gameName[0]);
+console.log(gameName.__proto__);// hows you all the string methods like length, toUpperCase(), charAt(), etc.
 
 
 // console.log(gameName.length);
