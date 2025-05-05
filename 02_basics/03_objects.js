@@ -34,5 +34,5 @@ JsUser.greetingTwo = function(){
     console.log(`Hello JS user, ${this.name}`);
 }
 
-console.log(JsUser.greeting());
-console.log(JsUser.greetingTwo());
+console.log(JsUser.greeting());// Hello JS user will be printed and //undefined will be printed  // because `console.log()` logs the return value, and there's no return
+console.log(JsUser.greetingTwo()); // Without a return statement, the function defaults to returning undefined.

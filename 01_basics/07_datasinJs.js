@@ -20,12 +20,12 @@ let myTimeStamp = Date.now()
 
 let newDate = new Date()
 console.log(newDate);
-console.log(newDate.getMonth() + 1);
+console.log(newDate.getMonth() + 1);// console.log(newDate.getMonth() + 1); // month (0-based, so +1)
 console.log(newDate.getDay());
 
 // `${newDate.getDay()} and the time `
 
-newDate.toLocaleString('default', {
-    weekday: "long",
+newDate.toLocaleString('default', {// Converts newDate to a string in the default locale.
+    weekday: "long",// { weekday: "long" }: Specifies that the weekday should be displayed in its full name (e.g., "Monday", "Tuesday").
     
 })

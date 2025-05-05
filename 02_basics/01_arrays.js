@@ -1,9 +1,9 @@
 // array
 
-const myArr = [0, 1, 2, 3, 4, 5]
+const myArr = [0, 1, 2, 3, 4, 5]// Array literal
 const myHeors = ["shaktiman", "naagraj"]
 
-const myArr2 = new Array(1, 2, 3, 4)
+const myArr2 = new Array(1, 2, 3, 4)// Array constructor
 // console.log(myArr[1]);
 
 // Array methods
@@ -12,19 +12,19 @@ const myArr2 = new Array(1, 2, 3, 4)
 // myArr.push(7)
 // myArr.pop()
 
-// myArr.unshift(9)
-// myArr.shift()
+// myArr.unshift(9) // adds 9 to the beginning of the array.
+// myArr.shift() // removes the first element from the array, so it removes 9 in this case.
 
 // console.log(myArr.includes(9));
 // console.log(myArr.indexOf(3));
 
-// const newArr = myArr.join()
+// const newArr = myArr.join() // combines all the elements of myArr into a single string separated by commas (by default)
 
-// console.log(myArr);
-// console.log( newArr);
+console.log(myArr);
+console.log( newArr);
 
 
-// slice, splice
+// slice : creates a new array not modify, splice: modify the original array donot create a new one
 
 console.log("A ", myArr);
 
