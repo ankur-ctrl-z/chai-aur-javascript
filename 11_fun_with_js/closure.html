@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Closure aur chai</title>
 </head>
-<body style="background-color: #313131;">
+<body style="background-color: #313131;"> 
     <button id="orange">Orange</button>
     <button id="green">Green</button>
 </body>
@@ -44,7 +44,7 @@
     //     function displayName() {
     //         console.log(name);
     //     }
-    //     return displayName;
+    //     return displayName; // 🟢 makeFunc() returns the displayName() function. Even though makeFunc() is done executing, myFunc() still remembers the variable name inside it.
     // }
 
     // const myFunc = makeFunc();
@@ -62,7 +62,7 @@
         function clickHandler(color){
             // document.body.style.backgroundColor = `${color}`
 
-            return function(){
+            return function(){ 
                 document.body.style.backgroundColor = `${color}`
             }
         }
