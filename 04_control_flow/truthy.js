@@ -25,7 +25,9 @@ if (Object.keys(emptyObj).length === 0) {
 
 // Nullish Coalescing Operator (??): null undefined
 
-let val1;
+let val1; // ?? operator null/undefined hone par hi right side ki value leta hai.
+// Baaki cases me left value hi le lega.
+
 // val1 = 5 ?? 10
 // val1 = null ?? 10
 // val1 = undefined ?? 15
@@ -40,4 +42,4 @@ console.log(val1);
 // condition ? true : false
 
 const iceTeaPrice = 100
-iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80")
+iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80") 

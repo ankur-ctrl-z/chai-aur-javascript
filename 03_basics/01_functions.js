@@ -9,10 +9,10 @@ function sayMyName(){
 
 // sayMyName()
 
-// function addTwoNumbers(number1, number2){
+function addTwoNumbers(number1, number2){
 
-//     console.log(number1 + number2);
-// }
+    console.log(number1 + number2);
+}
 
 function addTwoNumbers(number1, number2){
 
@@ -38,11 +38,11 @@ function loginUserMessage(username = "sam"){
 // console.log(loginUserMessage("hitesh"))
 
 
-function calculateCartPrice(val1, val2, ...num1){
+function calculateCartPrice(val1, val2, ...num1){// ...num1 (rest parameter) collects all the remaining arguments into an array.
     return num1
 }
 
-// console.log(calculateCartPrice(200, 400, 500, 2000))
+console.log(calculateCartPrice(200, 400, 500, 2000))
 
 const user = {
     username: "hitesh",
@@ -66,4 +66,4 @@ function returnSecondValue(getArray){
 }
 
 // console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200, 400, 500, 1000]));
+console.log(returnSecondValue([200, 400, 500, 1000])); 

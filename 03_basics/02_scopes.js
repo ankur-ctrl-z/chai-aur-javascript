@@ -7,7 +7,7 @@ if (true) {
     
 }
 
-
+ 
 
 // console.log(a);
 // console.log(b);
@@ -21,7 +21,7 @@ function one(){
         const website = "youtube"
         console.log(username);
     }
-    // console.log(website);
+    console.log(website);
 
      two()
 
@@ -33,7 +33,7 @@ if (true) {
     const username = "hitesh"
     if (username === "hitesh") {
         const website = " youtube"
-        // console.log(username + website);
+        console.log(username + website);
     }
     // console.log(website);
 }
@@ -44,7 +44,8 @@ if (true) {
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
 
-console.log(addone(5))
+console.log(addone(5)) // Ye function declaration hai, aur JavaScript isko hoist (upar le ja) leti hai.
+// Toh aap ise define karne se pehle bhi call kar sakte ho.
 
 function addone(num){
     return num + 1
@@ -52,7 +53,11 @@ function addone(num){
 
 
 
-addTwo(5)
+addTwo(5) // Ye function expression hai, jo const me likha gaya hai.
+// const variables hoist toh hote hain, lekin initialize nahi hote jab tak code us line tak na pahunch jaye.
+// Isliye agar aap addTwo(5) ko pehle call karoge, toh error aayega:
+// Cannot access 'addTwo' before initialization
+
 const addTwo = function(num){
     return num + 2
 }

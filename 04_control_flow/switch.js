@@ -7,6 +7,12 @@
 //         break;
 // }
 
+
+// Ye month variable ki value ko check karega multiple cases ke saath.
+// Jo case match karega, us block ka code run hoga, fir break se switch block se bahar aa jaayega.
+// Agar koi case match nahi karta, toh default block chalega.
+// But yahan "march" match ho gaya, isliye default nahi chala.
+
 const month = "march"
 
 switch (month) {
@@ -26,4 +32,4 @@ switch (month) {
     default:
         console.log("default case match");
         break;
-}
+} 
