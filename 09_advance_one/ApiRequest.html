@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +14,12 @@
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest(); // ✅ Creating a new XMLHttpRequest object (used to make API calls).
     xhr.open('GET', requestUrl)
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
         if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
+            const data = JSON.parse(this.responseText)//Yahan this ka matlab hai → xhr object
             console.log(typeof data);
             console.log(data.followers);
         }
@@ -27,3 +27,18 @@
     xhr.send();
 </script>
 </html>
+
+//// ✅ Normal function mein 'this' us object ko refer karta hai jisme function call hua hai.
+// ✅ Arrow function mein 'this' khud ka nahi hota, yeh apne parent (bahari) scope se 'this' leta hai.
+
+
+
+
+
+| `readyState` | Meaning                                 |
+| ------------ | --------------------------------------- |
+| 0            | Request not initialized                 |
+| 1            | Connection established                  |
+| 2            | Request received                        |
+| 3            | Processing request                      |
+| 4            | **Request finished** (Success or Error) |

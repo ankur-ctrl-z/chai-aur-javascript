@@ -7,8 +7,8 @@ const promiseOne = new Promise(function(resolve, reject){
     }, 1000)
 })
 
-promiseOne.then(function(){
-    console.log("Promise consumed");
+promiseOne.then(function(){// .then(...) – Jab promise resolve ho jata hai, tab ye function chalta hai.
+    console.log("Promise consumed");// .then() tabhi chalega jab resolve() ho chuka ho
 })
 
 new Promise(function(resolve, reject){
@@ -28,7 +28,7 @@ const promiseThree = new Promise(function(resolve, reject){
 })
 
 promiseThree.then(function(user){
-    console.log(user);
+    console.log(user);// isme wahi print hoga jo resolve object me hoga
 })
 
 const promiseFour = new Promise(function(resolve, reject){
@@ -40,7 +40,7 @@ const promiseFour = new Promise(function(resolve, reject){
             reject('ERROR: Something went wrong')
         }
     }, 1000)
-})
+}) 
 
  promiseFour
  .then((user) => {
@@ -67,7 +67,7 @@ const promiseFive = new Promise(function(resolve, reject){
 
 async function consumePromiseFive(){
     try {
-        const response = await promiseFive
+        const response = await promiseFive// // Await waits for the promise to resolve or reject
         console.log(response);
     } catch (error) {
         console.log(error);
@@ -98,5 +98,32 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 })
 .catch((error) => console.log(error))
 
-// promise.all
-// yes this is also available, kuch reading aap b kro.
+
+
+
+const p1 = Promise.resolve(10);
+const p2 = Promise.resolve(20);
+const p3 = Promise.resolve(30);
+
+Promise.all([p1, p2, p3])
+  .then((results) => {
+    console.log(results); // [10, 20, 30]
+  })
+  .catch((error) => {
+    console.log("One promise failed", error);
+  });
+
+
+// in promise.all if anyone got failed others will not execute like 
+
+// const p1 = Promise.resolve("A");
+// const p2 = Promise.reject("Failed");
+// const p3 = Promise.resolve("C");
+
+// Promise.all([p1, p2, p3])
+//   .then((results) => {
+//     console.log(results); // Won’t run
+//   })
+//   .catch((error) => {
+//     console.log(error); // "Failed"
+//   });

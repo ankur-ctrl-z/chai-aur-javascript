@@ -33,18 +33,18 @@
 
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
-    // }, false)
+    // }, false) // ✔️ false ka matlab hai bubbling phase – event pehle child pe chalega, phir parent pe. and vise-versa
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
+    //     e.stopPropagation()// Is example me agar tum "owl" image pe click karte ho,// to "clicked inside the ul" wala log nahi aayega, kyunki event upar propagate nahi karega.
     // }, false)
     
-    // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
-    //     console.log("google clicked");
-    // }, false)
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault(); Normally, <a href="https://google.com"> pe click karte hi Google open hota. But e.preventDefault() se page redirect nahi hoga.
+        e.stopPropagation()
+        console.log("google clicked");
+    }, false) 
    
     
     document.querySelector('#images').addEventListener('click', function(e){
@@ -62,5 +62,4 @@
 </script>
 </html>
 
-
-// ✅ This is called event delegation — instead of adding listeners to each image, we just listen on the parent ul and detect the target.
+/* ✅ This is called event delegation — instead of adding listeners to each image, we just listen on the parent ul and detect the target. */
