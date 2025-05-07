@@ -37,6 +37,6 @@ const myObject = {
 // for (const [key, value] of myObject) {// myObject is not iterable.
 // You cannot directly use for...of on a plain object.
 
-//     console.log(key, ':-', value);fj
+//     console.log(key, ':-', value);
     
 // }
