@@ -8,6 +8,7 @@ multipleBy5.power = 2
 console.log(multipleBy5(5));
 console.log(multipleBy5.power);
 console.log(multipleBy5.prototype);
+// 💡 Note: prototype sirf tab kaam aata hai jab tum new ke saath function ko constructor ki tarah use karo.
 
 function createUser(username, score){
     this.username = username
