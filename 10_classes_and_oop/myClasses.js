@@ -34,7 +34,7 @@ User.prototype.encryptPassword = function(){
 }
 User.prototype.changeUsername = function(){
     return `${this.username.toUpperCase()}`
-}
+} 
 
 
 const tea = new User("tea", "tea@gmail.com", "123")

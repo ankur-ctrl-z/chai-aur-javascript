@@ -5,9 +5,9 @@ class User {
 
     logMe(){
         console.log(`Username: ${this.username}`);
-    }
+    } 
 
-    static createId(){
+    static createId(){ //  ye class ka method hai, object pe kaam nahi karega!
         return `123`
     }
 }
@@ -17,7 +17,7 @@ const hitesh = new User("hitesh")
 
 class Teacher extends User {
     constructor(username, email){
-        super(username)
+        super(username) //  calls the parent (User) constructor.
         this.email = email
     }
 }

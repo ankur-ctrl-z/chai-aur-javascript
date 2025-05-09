@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React</title>
-</head>
+</head> 
 <body>
     <button>Button Clicked</button>
 </body>
@@ -29,3 +29,11 @@
     const app = new React() 
 </script>
 </html>
+
+
+
+| Code Part                            | Purpose                                                         |
+| ------------------------------------ | --------------------------------------------------------------- |
+| `this.handleClick.bind(this)`        | Ensures `this` inside method still points to the class instance |
+| `addEventListener('click', ...)`     | Runs `handleClick()` when button is clicked                     |
+| `this.server` inside `handleClick()` | Accesses class property because `this` is bound correctly       |

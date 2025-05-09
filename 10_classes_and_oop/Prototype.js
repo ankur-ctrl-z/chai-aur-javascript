@@ -6,7 +6,7 @@
 
 let myHeros = ["thor", "spiderman"]
 
-
+ 
 let heroPower = {
     thor: "hammer",
     spiderman: "sling",
@@ -22,12 +22,12 @@ Object.prototype.hitesh = function(){
 
 Array.prototype.heyHitesh = function(){
     console.log(`Hitesh says hello`);
-}
+} // Array.prototype.heyHitesh
 
-// heroPower.hitesh()
-// myHeros.hitesh()
-// myHeros.heyHitesh()
-// heroPower.heyHitesh()
+// heroPower.hitesh() // ✅ Works (object)
+// myHeros.hitesh() // ✅ Works (array inherits from object)
+// myHeros.heyHitesh() // ✅ Works (array)
+// heroPower.heyHitesh() // ❌ Error (object doesn’t inherit from Array)
 
 // inheritance
 
@@ -50,7 +50,7 @@ const TASupport = {
     __proto__: TeachingSupport
 }
 
-Teacher.__proto__ = User
+Teacher.__proto__ = User // Now Teacher inherits from User, so:
 
 // modern syntax
 Object.setPrototypeOf(TeachingSupport, Teacher)

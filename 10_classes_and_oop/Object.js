@@ -22,10 +22,15 @@ createUser.prototype.printMe = function(){
     console.log(`price is ${this.score}`);
 }
 
+// Yeh dono function har user ke liye common hain — isliye inhe prototype pe rakha gaya.
+
 const chai = new createUser("chai", 25)
 const tea = createUser("tea", 250)
 
 chai.printMe()
+
+
+// Prototype ek jagah hai jahan common functions rakhe jaate hain, aur har object unko access karta hai bina baar-baar copy kiye
 
 
 /*
