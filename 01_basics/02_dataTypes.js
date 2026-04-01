@@ -29,12 +29,12 @@ console.log(typeof undefined); // undefined
 console.log(typeof null); // object // typeof null returns "object" — this is a JavaScript bug from the past (it's not really an object, but it shows "object")
 
 // Symbols are often used as object keys to avoid key name conflicts
-const myKey = Symbol("secret");// The "secret" is just a description (also called a label) for the symbol. It’s optional and only used to help with debugging.
-const obj = {
-  [myKey]: "hidden value"
-};
+const user1 = Symbol("id");
+const user2 = Symbol("id");
 
-console.log(obj[myKey]); // "hidden value"
-// to access symbol you need to do something like
+const database = {};
+database[user1] = { name: "Rahul", age: 25 };
+database[user2] = { name: "Rahul", age: 30 };
 
-
+console.log(database[user1]); // { name: "Rahul", age: 25 }
+console.log(database[user2]); // { name: "Rahul", age: 30 }
