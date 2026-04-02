@@ -25,7 +25,7 @@ const promiseThree = new Promise(function(resolve, reject){
     setTimeout(function(){
         resolve({username: "Chai", email: "chai@example.com"})
     }, 1000)
-})
+}) 
 
 promiseThree.then(function(user){
     console.log(user);// isme wahi print hoga jo resolve object me hoga
@@ -127,3 +127,10 @@ Promise.all([p1, p2, p3])
 //   .catch((error) => {
 //     console.log(error); // "Failed"
 //   });
+
+
+
+
+
+
+
